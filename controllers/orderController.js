@@ -5,12 +5,13 @@ module.exports = {
         const order = new Order(req.body);
     
         try {
-            await order.save();
-            res.status(201).json({ status: true, message: 'Order placed successfully', data: order });
+          await order.save();
+          res.status(201).json({ status: true, message: 'Order placed successfully', data: order });
         } catch (error) {
-            res.status(500).json(error);
+          console.error("Error placing order:", error);
+          res.status(500).json({ status: false, message: 'Internal server error', error: error.message });
         }
-    },
+      },
 
     getOrderDetails: async (req, res) => {
         const orderId  = req.params.id;

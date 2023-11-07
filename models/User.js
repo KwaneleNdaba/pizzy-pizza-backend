@@ -12,7 +12,7 @@ const UserSchema = new mongoose.Schema(
         profile: {
             type: String,
             require: true,
-            default: "https://d326fntlu7tb1e.cloudfront.net/uploads/bdec9d7d-0544-4fc4-823d-3b898f6dbbbf-vinci_03.jpeg"
+            default: "https://scontent-jnb1-1.xx.fbcdn.net/v/t39.30808-6/369704066_1974971836197303_4338910228846949498_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VPRBtjvmW-0AX_W5U5r&_nc_ht=scontent-jnb1-1.xx&oh=00_AfDkj3zbi0rsY3TSCUKpG1pXv61yme7jwZ4toz8bpcmSmg&oe=654E6027"
         },
 
     }, { timestamps: true }

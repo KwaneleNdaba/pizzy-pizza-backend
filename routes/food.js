@@ -20,7 +20,7 @@ router.patch("/:id", foodController.foodAvailability);
 router.get("/restaurant/:restaurantId", foodController.getFoodsByRestaurant);
 
 router.get("/recommendation/:code", foodController.getRandomFoodsByCode);
-
+router.get("/", foodController.getAllFoods);
 
 
 

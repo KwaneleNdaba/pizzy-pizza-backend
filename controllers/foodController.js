@@ -199,4 +199,18 @@ module.exports = {
         }
     }
 
+    ,
+
+    getAllFoods: async (req, res) => {
+        try {
+            const foods = await Food.find();
+            if (!foods || foods.length === 0) {
+                return res.status(404).json({ status: false, message: 'No food items found in the database' });
+            }
+            res.status(200).json(foods);
+        } catch (error) {
+            res.status(500).json(error);
+        }
+    }
+
 }
